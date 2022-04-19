@@ -1,0 +1,78 @@
+# -*- coding:utf-8 -*-
+# auto：刘小涵  时间：{2021/6/8}
+
+## 定义参数，把用户名和密码设为参数
+#config: # 用例配置区
+#  name: 登录
+#  base_url: http://120.55.190.222:7080
+#  verify: false # 非https模式
+##  # 方式一：直接指定参数方式,
+##  variables:
+##    user: auto
+##    psw: sdfsdfsdf
+##  # 方式二：引用自定义函数-返回字典，用例变量--字典类型
+##  variables: {"user":"auto","psw":"sdfsdfsdf"}
+#  # 方式三：从debugtalk中引用函数返回的参数
+#  variables: ${login_variables()}
+#
+#teststeps: # 测试步骤--对应数据类型：列表
+#-
+#    name: 登录
+#    request:
+#      method: POST
+#      url: /api/mgr/loginReq
+#      data:
+#        username: ${user}
+#        password: ${psw}
+#    extract: # 对应数据格式-字典
+#      cookie: cookies.sessionid # 将sessionid赋值给cookie变量
+#    validate:
+#      - eq: ['body.retcode',0]
+
+
+## 定义测试步骤变量
+#config: # 用例配置区
+#  name: 登录
+#  base_url: http://120.55.190.222:7080
+#  verify: false # 非https模式
+#  variables: ${login_variables()}
+#
+#teststeps: # 测试步骤--对应数据类型：列表
+#-   name: 登录
+##    variables: ${login_variables()} # 该函数不能在步骤里使用
+#    # 步骤里的优先级高，步骤级别只能直接指定参数，不能引用
+#    variables:
+#      user: auto
+#      psw: sdfsdfsdf
+#    request:
+#      method: POST
+#      url: /api/mgr/loginReq
+#      data:
+#        username: ${user}
+#        password: ${psw}
+#    extract: # 对应数据格式-字典
+#      cookie: cookies.sessionid # 将sessionid赋值给cookie变量
+#    validate:
+#      - eq: ['body.retcode',0]
+
+#定义环境变量
+config: # 用例配置区
+  name: 登录
+  base_url: http://120.55.190.222:7080
+  verify: false # 非https模式
+  variables:
+    user: ${ENV(username)} #引用环境变量，注意在env文件里顶行写，不要空格，也不要注释
+    psw: ${ENV(password)}
+
+teststeps: # 测试步骤--对应数据类型：列表
+-   name: 登录
+    request:
+      method: POST
+      url: /api/mgr/loginReq
+      data:
+        username: ${user}
+        password: ${psw}
+    extract: # 对应数据格式-字典
+      cookie: cookies.sessionid # 将sessionid赋值给cookie变量
+    validate:
+      - eq: ['body.retcode',0]

@@ -1,0 +1,221 @@
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=227967), 'exception': None, 'extra': {}, 'file': (name='runner.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\runner.py'), 'function': 'test_start', 'level': (name='INFO', no=20, icon='ℹ️'), 'line': 450, 'message': 'Start to run testcase: testcase description, TestCase ID: ab1965d3-63f0-419e-80be-eea0a2092fd2', 'module': 'runner', 'name': 'httprunner.runner', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 763415, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=237227), 'exception': None, 'extra': {}, 'file': (name='runner.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\runner.py'), 'function': '__run_step', 'level': (name='INFO', no=20, icon='ℹ️'), 'line': 292, 'message': 'run step begin: /api/mgr/sq_mgr/ >>>>>>', 'module': 'runner', 'name': 'httprunner.runner', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 772675, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=343705), 'exception': None, 'extra': {}, 'file': (name='client.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\client.py'), 'function': 'request', 'level': (name='DEBUG', no=10, icon='🐞'), 'line': 186, 'message': 'client IP: 172.28.5.145, Port: 56195', 'module': 'client', 'name': 'httprunner.client', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 879153, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=344363), 'exception': None, 'extra': {}, 'file': (name='client.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\client.py'), 'function': 'request', 'level': (name='DEBUG', no=10, icon='🐞'), 'line': 194, 'message': 'server IP: 120.55.190.222, Port: 7080', 'module': 'client', 'name': 'httprunner.client', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 879811, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=345024), 'exception': None, 'extra': {}, 'file': (name='client.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\client.py'), 'function': 'log_print', 'level': (name='DEBUG', no=10, icon='🐞'), 'line': 40, 'message': '\n================== request details ==================\nmethod   : GET\nurl      : http://120.55.190.222:7080/api/mgr/sq_mgr/?action=list_course&pagenum=1&pagesize=20\nheaders  : {\n    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",\n    "Accept-Encoding": "gzip, deflate",\n    "Accept": "application/json, text/plain, */*",\n    "Connection": "keep-alive",\n    "Host": "120.55.190.222:7080",\n    "Referer": "http://120.55.190.222:7080/mgr/ps/mgr/index.html",\n    "Accept-Language": "zh-CN,zh;q=0.9",\n    "Cookie": "sessionid=e9a2ksxrkmgnbkxjypr93lssq96a4alo",\n    "HRUN-Request-ID": "HRUN-ab1965d3-63f0-419e-80be-eea0a2092fd2-299773"\n}\ncookies  : {\n    "sessionid": "e9a2ksxrkmgnbkxjypr93lssq96a4alo"\n}\nbody     : None\n', 'module': 'client', 'name': 'httprunner.client', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 880472, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=366913), 'exception': None, 'extra': {}, 'file': (name='client.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\client.py'), 'function': 'log_print', 'level': (name='DEBUG', no=10, icon='🐞'), 'line': 40, 'message': '\n================== response details ==================\nstatus_code : 200\nheaders  : {\n    "Content-Type": "application/json",\n    "X-Frame-Options": "SAMEORIGIN",\n    "Content-Length": "2082",\n    "Vary": "Cookie",\n    "Date": "Tue, 06 Jul 2021 14:21:40 GMT",\n    "Server": "0.0.0.0"\n}\ncookies  : {}\nencoding : utf-8\ncontent_type : application/json\nbody     : {\n    "retcode": 0,\n    "retlist": [\n        {\n            "id": 3021,\n            "name": "\\u677e\\u52e4\\u6d4b\\u5f00",\n            "desc": "\\u677e\\u52e4\\u6d4b\\u5f00\\u8bfe\\u7a0b",\n            "display_idx": 1\n        },\n        {\n            "id": 3260,\n            "name": "physical",\n            "desc": "so easy",\n            "display_idx": 1\n        },\n        {\n            "id": 3312,\n            "name": "JavaScript",\n            "desc": "so easy",\n            "display_idx": 1\n        },\n        {\n            "id": 3366,\n            "name": "\\u6570\\u5b66",\n            "desc": "123123",\n            "display_idx": 1\n        },\n        {\n            "id": 3367,\n            "name": "\\u5927\\u5b66\\u82f1\\u8bed",\n            "desc": "\\u82f1\\u8bed\\u8bfe\\u7a0b",\n            "display_idx": 1\n        },\n        {\n            "id": 3440,\n            "name": "cmm0703",\n            "desc": "July 3rd",\n            "display_idx": 1\n        },\n        {\n            "id": 3441,\n            "name": "cmm070302",\n            "desc": "July 3rd",\n            "display_idx": 1\n        },\n        {\n            "id": 3443,\n            "name": "cmm070303",\n            "desc": "July 3rd",\n            "display_idx": 1\n        },\n        {\n            "id": 3393,\n            "name": "\\u5927\\u5b66\\u82f1\\u8bed162400094659",\n            "desc": "\\u82f1\\u8bed\\u8bfe\\u7a0b",\n            "display_idx": 2\n        },\n        {\n            "id": 3403,\n            "name": "\\u521d\\u4e2d\\u8bed\\u6587",\n            "desc": "\\u521d\\u4e2d\\u8bed\\u6587\\u8bfe\\u7a0b",\n            "display_idx": 4\n        },\n        {\n            "id": 3406,\n            "name": "\\u521d\\u4e2d\\u6570\\u5b66",\n            "desc": "\\u6211\\u6700\\u559c\\u6b22\\u7684\\u79d1\\u76ee",\n            "display_idx": 4\n        },\n        {\n            "id": 3449,\n            "name": "\\u521d\\u4e2d\\u5316\\u5b66789",\n            "desc": "\\u521d\\u4e2d\\u5316\\u5b66\\u8bfe\\u7a0b",\n            "display_idx": 4\n        },\n        {\n            "id": 3450,\n            "name": "\\u521d\\u4e2d\\u5316\\u5b66852645",\n            "desc": "\\u521d\\u4e2d\\u5316\\u5b66\\u8bfe\\u7a0b",\n            "display_idx": 4\n        },\n        {\n            "id": 3447,\n            "name": "\\u5c0f\\u5b66\\u6570\\u5b66123456789",\n            "desc": "\\u4e49\\u52a1\\u6559\\u80b2\\u6570\\u5b66",\n            "display_idx": 123\n        },\n        {\n            "id": 3448,\n            "name": "\\u5c0f\\u5b66\\u6570\\u5b661234567890",\n            "desc": "\\u4e49\\u52a1\\u6559\\u80b2\\u6570\\u5b66",\n            "display_idx": 123\n        },\n        {\n            "id": 3431,\n            "name": "\\u521d\\u4e2d\\u5316\\u5b66",\n            "desc": "httprunner\\u8bfe\\u7a0b",\n            "display_idx": 889\n        },\n        {\n            "id": 3432,\n            "name": "\\u521d\\u4e2d\\u5316\\u5b66231",\n            "desc": "httprunner\\u8bfe\\u7a0b",\n            "display_idx": 889\n        },\n        {\n            "id": 3433,\n            "name": "\\u521d\\u4e2d\\u5316\\u5b662331",\n            "desc": "httprunner\\u8bfe\\u7a0b",\n            "display_idx": 889\n        },\n        {\n            "id": 3434,\n            "name": "\\u521d\\u4e2d\\u5316\\u5b6612331",\n            "desc": "httprunner\\u8bfe\\u7a0b",\n            "display_idx": 889\n        },\n        {\n            "id": 3435,\n            "name": "\\u521d\\u4e2d\\u5316\\u5b6623931",\n            "desc": "httprunner\\u8bfe\\u7a0b",\n            "display_idx": 889\n        }\n    ],\n    "total": 21\n}\n', 'module': 'client', 'name': 'httprunner.client', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 902361, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=367509), 'exception': None, 'extra': {}, 'file': (name='client.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\client.py'), 'function': 'request', 'level': (name='INFO', no=20, icon='ℹ️'), 'line': 217, 'message': 'status_code: 200, response_time(ms): 105.15 ms, response_length: 0 bytes', 'module': 'client', 'name': 'httprunner.client', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 902957, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=368170), 'exception': None, 'extra': {}, 'file': (name='response.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\response.py'), 'function': 'validate', 'level': (name='INFO', no=20, icon='ℹ️'), 'line': 246, 'message': 'assert status_code equal 200(int)\t==> pass', 'module': 'response', 'name': 'httprunner.response', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 903618, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=368170), 'exception': None, 'extra': {}, 'file': (name='response.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\response.py'), 'function': 'validate', 'level': (name='INFO', no=20, icon='ℹ️'), 'line': 246, 'message': 'assert headers."Content-Type" equal application/json(str)\t==> pass', 'module': 'response', 'name': 'httprunner.response', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 903618, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=368832), 'exception': None, 'extra': {}, 'file': (name='response.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\response.py'), 'function': 'validate', 'level': (name='INFO', no=20, icon='ℹ️'), 'line': 246, 'message': 'assert body.retcode equal 0(int)\t==> pass', 'module': 'response', 'name': 'httprunner.response', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 904280, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=369494), 'exception': None, 'extra': {}, 'file': (name='response.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\response.py'), 'function': 'validate', 'level': (name='INFO', no=20, icon='ℹ️'), 'line': 246, 'message': 'assert body.total equal 21(int)\t==> pass', 'module': 'response', 'name': 'httprunner.response', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 904942, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=369494), 'exception': None, 'extra': {}, 'file': (name='runner.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\runner.py'), 'function': '__run_step', 'level': (name='INFO', no=20, icon='ℹ️'), 'line': 304, 'message': 'run step end: /api/mgr/sq_mgr/ <<<<<<\n', 'module': 'runner', 'name': 'httprunner.runner', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 904942, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---
+--- Logging error in Loguru Handler #0 ---
+Record was: {'elapsed': datetime.timedelta(seconds=1, microseconds=370155), 'exception': None, 'extra': {}, 'file': (name='runner.py', path='d:\\pyproject\\ceshikaifa\\diango\\myvenv\\lib\\site-packages\\httprunner\\runner.py'), 'function': 'test_start', 'level': (name='INFO', no=20, icon='ℹ️'), 'line': 460, 'message': 'generate testcase log: D:\\PYproject\\Ceshikaifa\\projectTraining\\day1\\logs\\ab1965d3-63f0-419e-80be-eea0a2092fd2.run.log', 'module': 'runner', 'name': 'httprunner.runner', 'process': (id=13500, name='MainProcess'), 'thread': (id=8956, name='MainThread'), 'time': datetime(2021, 7, 6, 22, 21, 39, 905603, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800), '中国标准时间'))}
+Traceback (most recent call last):
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_handler.py", line 177, in emit
+    self._sink.write(str_record)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\loguru\_simple_sinks.py", line 26, in write
+    self._stream.write(message)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 41, in write
+    self.__convertor.write(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 162, in write
+    self.write_and_convert(text)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 187, in write_and_convert
+    self.write_plain_text(text, cursor, start)
+  File "d:\pyproject\ceshikaifa\diango\myvenv\lib\site-packages\colorama\ansitowin32.py", line 196, in write_plain_text
+    self.wrapped.flush()
+OSError: [WinError 6] 句柄无效。
+--- End of logging error ---

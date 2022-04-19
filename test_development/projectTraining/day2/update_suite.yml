@@ -1,0 +1,19 @@
+# -*- coding:utf-8 -*-
+# auto：刘小涵  时间：{2021/6/10}
+
+config:
+  name: 修改课程
+  verify: false
+  base_url: http://120.55.190.222:7080
+
+
+testcases:
+-
+  name: 添加课程
+  testcase: suite_case\add_course.yml
+-
+  name: 修改课程
+  testcase: suite_case\update_course.yml
+-
+  name: 删除课程
+  testcase: suite_case\delete_course.yml

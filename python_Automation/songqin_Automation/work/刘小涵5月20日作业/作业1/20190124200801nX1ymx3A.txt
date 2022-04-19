@@ -1,0 +1,103 @@
+RobotFramework 作业 2
+
+
+创建一个测试套件文件，实现 2个测试用例：
+用例1：
+
+    1.  用Python语言开发一个测试库 course_mgr.py。
+        该库有一个函数 listCourse 可以返回教管系统的所有课程（可以使用requests库开发）。
+        
+
+    2.  用RF测试用例来使用 listCourse 关键字， 根据其返回的课程列表，
+        将所有的课程名输出到日志文件中（使用循环）
+        验证是否和预期课程相同
+
+用例2：
+    登录网站https://www.vmall.com/index.html
+    获得所有热销单品的名称，打印在log报表中
+
+【参考答案，往下翻】
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+测试库 course_mgr.py
+import requests
+
+def listCourse():
+    params = {'action':'list_course', 'pagenum':'1', 'pagesize':20 }
+    response = requests.get("http://localhost/api/mgr/sq_mgr/",params=params)
+
+    bodyDict = response.json()
+
+    return [ one['name']  for one in  bodyDict["retlist"]]
+
+
+if "__main__" == __name__:
+    cnamelist = listCourse()
+    for one in cnamelist:
+        print (one)
+        
+        
+        
+        
+        
+        
+        
+测试套件文件 s1.robot
+*** Settings ***
+Library    SeleniumLibrary
+Library    course_mgr
+Library    Collections
+
+
+*** Test Cases ***
+测试1
+     ${courseList}=   ListCourse
+     :FOR   ${ele}  IN  @{courseList}
+       \    log to console   ${ele}
+
+
+     ${expected}=      Create List     python语言    初中化学
+    Lists Should Be Equal     ${courseList}     ${expected}
+
+
+
+测试2
+    Open Browser    https://www.vmall.com/    chrome
+    Set Selenium Implicit Wait    4
+    ${eles}=    Get Webelements   css=.home-hot-goods .grid-items:not(.grid-items-sm) div
+    :FOR   ${ele}  IN  @{eles}
+       \   log to console   ${ele.text}
+       \   ${eletxt}=   evaluate  $ele.get_attribute('innerText')
+       \   log to console   ${eletxt}
+
+    Close Browser

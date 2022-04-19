@@ -1,0 +1,160 @@
+select a.product_code,
+a.product_item_name,
+b.product_guidance_price,
+b.sell_price as product_pay_price,
+b.product_model,
+nvl(a.product_category_one_id,b.product_category_one_id)  as product_category_one_id,
+nvl(a.product_category_one,b.product_category_one) as product_category_one ,
+cast(null as string) as product_family,
+cast(null as string) as product_energy_efficiency,
+cast(null as string) as product_base_unit,
+cast(null as string) as hot_product,
+nvl(a.product_picture_url,b.product_picture_url)  as product_picture_url,
+a.product_mininum_price,
+a.product_maxnum_price,
+from_unixtime(unix_timestamp(),'YY-MM-dd hh:mm:ss') as lut,
+0 as is_mall_record,
+1 as is_asale_record,
+a.status as status
+from (
+    SELECT
+     max(a.code) as product_code
+    ,max(b.name) as product_item_name
+    ,max(d.id) as product_category_one_id
+    ,max(d.name) as product_category_one
+    ,max(b.major_picture) as product_picture_url
+    ,max(e.mininum_price) as product_mininum_price
+    ,max(e.maxnum_price) as product_maxnum_price
+    ,max(b.status) as status
+    from ods_yx_deepexi_domain_commodity_n01.commodity_sku a
+    left join ods_yx_deepexi_domain_commodity_n01.commodity_item b
+        on a.item_id =b.id and b.is_deleted = 0
+    left join ods_yx_deepexi_domain_commodity_n01.commodity_category c
+        on b.category_id = c.id  and c.is_deleted =0
+    LEFT join ods_yx_deepexi_domain_commodity_n01.commodity_category d
+        on SUBSTRING_INDEX(c.path,'/',1)  = d.id  and d.is_deleted =0
+    LEFT JOIN ods_yx_deepexi_dd_domain_common_n01.common_range_price e
+        on a.id = e.sku_id  and e.is_deleted = 0
+    where a.is_deleted = 0 and b.status = 3
+    group by a.code
+) a
+left join (
+    select
+    max(a.seller_sku_code) as product_code,
+    max(b.item_name) as product_item_name,
+    max(a.sku_guide_price) as product_guidance_price,
+    max(f.sell_price) as sell_price,
+    max(b.product_model) as product_model ,
+    max(c.level_one_cid) as product_category_one_id,
+    max(c.level_one_name) as product_category_one,
+    max(a.sku_ad_picture) as product_picture_url,
+    max(b.item_status) as status
+    from (
+        select a.*
+        from ods_mall_goodscenter_n01.item_sku a
+        where a.shop_id in (2000001053) and a.sku_status = 1
+    ) a
+    inner join ods_mall_goodscenter_n01.item b
+        on a.item_id = b.item_id and b.item_status = 4
+    inner join (
+        select aa.cid as level_one_cid,
+        aa.c_name as level_one_name,
+        bb.cid as level_two_cid,
+        bb.c_name as level_two_name,
+        cc.cid as level_three_cid,
+        cc.c_name as level_three_name
+        from (
+            select cid,c_name
+            from ods_mall_goodscenter_n01.item_category
+            where lev=1
+        ) aa
+        left join ods_mall_goodscenter_n01.item_category bb
+            on aa.cid = bb.parent_cid
+        left join ods_mall_goodscenter_n01.item_category cc
+            on bb.cid = cc.parent_cid
+    ) c on b.cid = c.level_three_cid
+    left join ods_mall_goodscenter_n01.trade_sku_price f
+        on a.item_id = f.item_id
+    GROUP by a.seller_sku_code
+) b on a.product_code = b.product_code
+union all
+select a.product_code,
+a.product_item_name,
+a.product_guidance_price,
+a.sell_price as product_pay_price,
+a.product_model,
+a.product_category_one_id,
+a.product_category_one ,
+cast(null as string) as product_family,
+cast(null as string) as product_energy_efficiency,
+cast(null as string) as product_base_unit,
+cast(null as string) as hot_product,
+a.product_picture_url,
+cast(null as decimal)  as product_mininum_price,
+cast(null as decimal)  as product_maxnum_price,
+from_unixtime(unix_timestamp(),'YY-MM-dd hh:mm:ss') as lut,
+1 as is_mall_record,
+0 as is_asale_record,
+a.status as status
+from (
+    select
+    max(a.seller_sku_code) as product_code,
+    max(b.item_name) as product_item_name,
+    max(a.sku_guide_price) as product_guidance_price,
+    max(f.sell_price) as sell_price,
+    max(b.product_model) as product_model ,
+    max(c.level_one_cid) as product_category_one_id,
+    max(c.level_one_name) as product_category_one,
+    max(a.sku_ad_picture) as product_picture_url,
+    max(b.item_status) as status
+    from (
+        select a.*
+        from ods_mall_goodscenter_n01.item_sku a
+        where a.shop_id in (2000001053) and a.sku_status = 1
+    ) a
+    inner join ods_mall_goodscenter_n01.item b
+        on a.item_id = b.item_id and b.item_status = 4
+    inner join (
+        select aa.cid as level_one_cid,
+        aa.c_name as level_one_name,
+        bb.cid as level_two_cid,
+        bb.c_name as level_two_name,
+        cc.cid as level_three_cid,
+        cc.c_name as level_three_name
+        from (
+            select cid,c_name
+            from ods_mall_goodscenter_n01.item_category
+            where lev=1
+        ) aa
+        left join ods_mall_goodscenter_n01.item_category bb
+            on aa.cid = bb.parent_cid
+        left join ods_mall_goodscenter_n01.item_category cc
+            on bb.cid = cc.parent_cid
+    ) c on b.cid = c.level_three_cid
+    left join ods_mall_goodscenter_n01.trade_sku_price f
+        on a.item_id = f.item_id
+    GROUP by a.seller_sku_code
+) a
+left join (
+    SELECT
+     max(a.code) as product_code
+    ,max(b.name) as product_item_name
+    ,max(d.id) as product_category_one_id
+    ,max(d.name) as product_category_one
+    ,max(b.major_picture) as product_picture_url
+    ,max(e.mininum_price) as product_mininum_price
+    ,max(e.maxnum_price) as product_maxnum_price
+    ,max(b.status) as status
+    from ods_yx_deepexi_domain_commodity_n01.commodity_sku a
+    left join ods_yx_deepexi_domain_commodity_n01.commodity_item b
+        on a.item_id =b.id and b.is_deleted = 0
+    left join ods_yx_deepexi_domain_commodity_n01.commodity_category c
+        on b.category_id = c.id  and c.is_deleted =0
+    LEFT join ods_yx_deepexi_domain_commodity_n01.commodity_category d
+        on SUBSTRING_INDEX(c.path,'/',1)  = d.id  and d.is_deleted =0
+    LEFT JOIN ods_yx_deepexi_dd_domain_common_n01.common_range_price e
+        on a.id = e.sku_id  and e.is_deleted = 0
+    where a.is_deleted = 0 and b.status = 3
+    group by a.code
+) b on a.product_code = b.product_code
+where b.product_code is null

@@ -1,0 +1,109 @@
+2021-07-08 19:54:35.890 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: 列出课程测试, TestCase ID: cb41e93e-0744-42f1-9883-55685000f47d
+2021-07-08 19:54:35.900 | INFO     | httprunner.runner:__run_step:292 - run step begin: 登录 >>>>>>
+2021-07-08 19:54:36.162 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 63346
+2021-07-08 19:54:36.162 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-07-08 19:54:36.163 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://120.55.190.222:7080/api/mgr/loginReq
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-cb41e93e-0744-42f1-9883-55685000f47d-275900",
+    "Content-Length": "32",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {}
+body     : username=auto&password=sdfsdfsdf
+
+2021-07-08 19:54:36.164 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "14",
+    "Vary": "Cookie",
+    "Set-Cookie": "sessionid=apybvcwpmwlijo20cgm8f4ofexb1432d; HttpOnly; Path=/",
+    "Date": "Thu, 08 Jul 2021 11:54:35 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {
+    "sessionid": "apybvcwpmwlijo20cgm8f4ofexb1432d"
+}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0
+}
+
+2021-07-08 19:54:36.165 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 260.57 ms, response_length: 0 bytes
+2021-07-08 19:54:36.165 | INFO     | httprunner.response:extract:176 - extract mapping: {'cookie': 'apybvcwpmwlijo20cgm8f4ofexb1432d', 'length': None}
+2021-07-08 19:54:36.165 | INFO     | httprunner.runner:__run_step:304 - run step end: 登录 <<<<<<
+
+2021-07-08 19:54:36.166 | INFO     | httprunner.runner:__run_step:292 - run step begin: 步骤一-列出课程 >>>>>>
+2021-07-08 19:54:36.232 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 63346
+2021-07-08 19:54:36.232 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-07-08 19:54:36.233 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : http://120.55.190.222:7080/api/mgr/sq_mgr/?action=list_course&pagenum=1&pagesize=20
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-cb41e93e-0744-42f1-9883-55685000f47d-276167",
+    "Cookie": "sessionid=apybvcwpmwlijo20cgm8f4ofexb1432d; sessionid=apybvcwpmwlijo20cgm8f4ofexb1432d"
+}
+cookies  : {
+    "sessionid": "apybvcwpmwlijo20cgm8f4ofexb1432d"
+}
+body     : None
+
+2021-07-08 19:54:36.234 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "350",
+    "Vary": "Cookie",
+    "Date": "Thu, 08 Jul 2021 11:54:35 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0,
+    "retlist": [
+        {
+            "id": 3021,
+            "name": "\u677e\u52e4\u6d4b\u5f00",
+            "desc": "\u677e\u52e4\u6d4b\u5f00\u8bfe\u7a0b",
+            "display_idx": 1
+        },
+        {
+            "id": 3312,
+            "name": "JavaScript",
+            "desc": "so easy",
+            "display_idx": 1
+        },
+        {
+            "id": 3458,
+            "name": "\u521d\u4e2d\u5316\u5b66852645",
+            "desc": "\u521d\u4e2d\u5316\u5b66\u8bfe\u7a0b",
+            "display_idx": 4
+        }
+    ],
+    "total": 3
+}
+
+2021-07-08 19:54:36.234 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 64.81 ms, response_length: 0 bytes
+2021-07-08 19:54:36.234 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-07-08 19:54:36.235 | INFO     | httprunner.response:validate:246 - assert body.retcode equal 0(int)	==> pass
+2021-07-08 19:54:36.235 | INFO     | httprunner.runner:__run_step:304 - run step end: 步骤一-列出课程 <<<<<<
+

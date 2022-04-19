@@ -1,0 +1,54 @@
+# -*- coding:utf-8 -*-
+# auto：刘小涵  时间：{2021/6/10}
+
+# 尝试使用接口添加课程
+#config:
+#  name: 添加课程
+#  verify: false
+#  base_url: http://120.55.190.222:7080
+#
+#teststeps:
+#-
+#  name: 登录
+#  testcase: testcase2\login.yml
+#-
+#  name: 添加课程
+#  request:
+#    method: POST
+#    url: /api/mgr/sq_mgr/
+#    data:
+#      action: add_course
+#      data: '{ "name":"初中化学","desc":"初中化学课程","display_idx":"4"}'
+#  validate:
+#    - eq: ['status_code',200,]
+#    - eq: ['body.retcode',0]
+
+
+# 提取添加课程的id，使该课程能被修改
+config:
+  name: 添加课程
+  verify: false
+  base_url: http://120.55.190.222:7080
+  export:
+  - course_id
+  - cookie
+
+teststeps:
+-
+  name: 登录
+  testcase: testcase2\login.yml
+-
+  name: 添加课程
+  request:
+    method: POST
+    url: /api/mgr/sq_mgr/
+    data:
+      action: add_course
+      data: '{"name":"初中化学","desc":"初中化学课程","display_idx":"4"}'
+    cookies:
+      sessionid: ${cookie}
+  extract:
+    course_id: body.id
+  validate:
+    - eq: ['status_code',200,]
+    - eq: ['body.retcode',0]

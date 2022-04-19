@@ -1,0 +1,156 @@
+RobotFramework 作业 3
+按照如下说明 安装、运行 教学管理web系统的安装包
+
+
+1.确保本机已经安装了python3.6，并且pip命令的目录已经添加到path环境变量中。
+   
+
+2.百度网盘下载地址
+    链接：https://pan.baidu.com/s/1K7NV8R9sS9FXzUOFAtxbeQ
+    
+提取码：f879 
+
+    下载zip包
+    解压zip包到一个目录中（请确保该目录的路径里面没有中文字符）
+
+3.进入目录，双击运行install.bat，安装必要的库
+
+4. 最后双击run.bat即可运行该web系统。 注意：run.bat 里面运行着产品服务，不要关闭该命令行窗口。
+    如果运行run.bat 出现  80 port not free 这样的问题，解决方案参考VIP系统问题解答松勤论坛 
+    http://vip.ytesting.com:80/qa01Controller.do?openArticle&id=ff808081683f9f5f01684a7068a60551
+    
+
+5.登录浏览器，输入http://localhost/mgr/login/login.html地址，进入管理员登录界面。 
+    输入管理员用户名auto，密码为 sdfsdfsdf，即可登录
+
+
+
+
+创建一个RF测试套件，包含下面的一个用例
+
+
+用例名：
+验证当系统中没有课程的时候，是否能成功添加一个课程
+
+前置条件：
+系统中没有课程
+
+测试步骤：
+添加课程，输入课程名、详情描述、展示次序，点击创建
+
+预期结果：
+创建的课程正确显示在下面的课程列表中。
+这里为了简化，我们只检查 课程名就可以了
+
+
+注意：
+这个用例的初始化和清除操作，都是需要设置为无课程状态。
+需要我们开发一个python测试库，使用selenium库开发关键字函数deleteAllCourse， 实现使用Python自动点击删除课程按钮
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+测试库 lib1.py
+# coding:utf8
+from selenium import webdriver
+import time
+
+executable_path = r"d:\tools\webdrivers\chromedriver.exe"
+
+
+def DeleteAllCourse():
+    driver = webdriver.Chrome(executable_path)
+    driver.implicitly_wait(10)
+    driver.get('http://localhost/mgr/login/login.html')
+    driver.find_element_by_id('username').send_keys('auto')
+    driver.find_element_by_id('password').send_keys('sdfsdfsdf')
+    driver.find_element_by_tag_name('button').click()
+
+    driver.implicitly_wait(2)
+    while True:
+        deleteButtons = driver.find_elements_by_css_selector(
+            "button[ng-click^='delOne']")
+        if deleteButtons:
+            deleteButtons[0].click()
+            driver.find_element_by_css_selector('button.btn-primary').click()
+            time.sleep(1)
+        else:
+            break
+
+
+    driver.implicitly_wait(10)
+
+    driver.quit()
+    
+RF测试套件文件 t1.robot
+*** Settings ***
+Library    SeleniumLibrary
+Library    Collections
+Library    st
+
+*** Test Cases ***
+测试1
+    [Setup]     DeleteAllCourse
+    Open Browser    http://localhost/mgr/login/login.html    chrome
+    Set Selenium Implicit Wait   10
+
+    Input Text   id=username    auto
+    Input Text   id=password    sdfsdfsdf
+    Click Element   tag=button
+
+
+    Click Element   css=button[ng-click^=showAddOne]
+
+
+    input text      css=input[ng-model='addData.name']    初中化学
+    input text      css=textarea[ng-model='addData.desc']    初中化学描述
+    input text      css=input[ng-model='addData.display_idx']    1
+
+    Click Element   css=button[ng-click^=addOne]
+
+    sleep   1
+
+    ${eles}=    Get Webelements    css=tr>td:nth-child(2)
+
+    ${lessons}=    create list
+    :FOR   ${ele}   IN   @{eles}
+       \   log to console    ${ele.text}
+       \   Append To List   ${lessons}   ${ele.text}
+
+
+    ${expected}=   create list    初中化学
+    Lists Should Be Equal    ${lessons}     ${expected}
+
+
+    Close Browser
+
+    [Teardown]   DeleteAllCourse

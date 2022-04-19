@@ -1,0 +1,80 @@
+# -*- coding:utf-8 -*-
+# auto：刘小涵  时间：{2021/6/8}
+
+config: # 用例配置
+  name: 列出课程测试
+  base_url: http://120.55.190.222:7080
+  verify: false  # 非https模式
+
+teststeps: # 测试步骤--对应数据类型：列表,"-"代表列表格式
+#  # 第一步：尝试编写接口请求，此时不需要cookies值，显示未登录
+#  - name: 步骤1-列出课程
+#    request:
+#      method: GET #请求方法
+#      url: /api/mgr/sq_mgr/
+#      params: # 换行缩进代表字典格式
+#        action: list_course
+#        pagenum: '1'
+#        pagesize: '20'
+#    validate: # 校验-对应列表数据
+#      - eq: # 判断实际值和预期值是否相等，对应数据类型-列表
+#          - status_code
+#          - 200
+
+#  # 第二步：尝试编写接口请求，此时需要cookies值，添加登录接口
+#  - name: 登录
+#    request:
+#      method: POST
+#      url: /api/mgr/loginReq
+#      data: # post表单类型用data
+#        username: auto
+#        password: sdfsdfsdf
+#    extract: # 对应数据格式-字典
+#      cookie: cookies.sessionid # 将sessionid赋值给cookie变量
+#      length: header.Content-Length # jmespath
+#
+#  - name: 步骤一-列出课程
+#    request:
+#      method: GET #请求方法
+#      url: /api/mgr/sq_mgr/
+#      params: # get类型用params
+#        action: list_course
+#        pagenum: '1'
+#        pagesize: '20'
+#      cookies:
+#        sessionid: ${cookie} #引用变量
+#    validate: # 校验-对应列表数据
+#      - eq: # 判断实际值和预期值是否相等，对应数据类型-列表
+#          - status_code
+#          - 200
+#      - eq:
+#          - body.retcode
+#          - 0
+##      - eq:
+##          - body.total
+##          - 1
+
+  # 第三步：尝试引用login用例
+  - name: 登录
+    testcase: testcase\login.yml
+
+  - name: 步骤二-列出课程
+    request:
+      method: GET #请求方法
+      url: /api/mgr/sq_mgr/
+      params:
+        action: list_course
+        pagenum: 1
+        pagesize: 20
+      cookies:
+        sessionid: ${cookie} #引用变量
+    validate: # 校验-对应列表数据
+      - eq: # 判断实际值和预期值是否相等，对应数据类型-列表
+          - status_code
+          - 200
+      - eq:
+          - body.retcode
+          - 0
+#      - eq:
+#          - body.total
+#          - 1

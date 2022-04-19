@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200916 16:12:44.764" rpa="false">
+<suite id="s1" name="Tc" source="D:\PYproject\test\ProjectTraining\spj02\tc">
+<kw name="Delete All School Classes" library="pylib.SchoolClassLib" type="setup">
+<msg timestamp="20200916 16:12:44.982" level="INFO">{'msg': 'vcode format error:vcode error', 'retcode': 2}
+{'msg': 'vcode format error:vcode error', 'retcode': 2}</msg>
+<msg timestamp="20200916 16:12:44.983" level="FAIL">KeyError: 'retlist'</msg>
+<status status="FAIL" starttime="20200916 16:12:44.835" endtime="20200916 16:12:44.983"></status>
+</kw>
+<suite id="s1-s1" name="D-7年级1班" source="D:\PYproject\test\ProjectTraining\spj02\tc\d-7年级1班">
+<suite id="s1-s1-s1" name="班级管理" source="D:\PYproject\test\ProjectTraining\spj02\tc\d-7年级1班\班级管理.robot">
+<test id="s1-s1-s1-t1" name="添加班级3 - tc000003">
+<status status="FAIL" starttime="20200916 16:12:44.985" endtime="20200916 16:12:44.986" critical="yes">Parent suite setup failed:
+KeyError: 'retlist'</status>
+</test>
+<status status="FAIL" starttime="20200916 16:12:44.984" endtime="20200916 16:12:44.987">Parent suite setup failed:
+KeyError: 'retlist'</status>
+</suite>
+<status status="FAIL" starttime="20200916 16:12:44.983" endtime="20200916 16:12:44.989">Parent suite setup failed:
+KeyError: 'retlist'</status>
+</suite>
+<status status="FAIL" starttime="20200916 16:12:44.765" endtime="20200916 16:12:44.990">Suite setup failed:
+KeyError: 'retlist'</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Tc">Tc</stat>
+<stat pass="0" fail="1" id="s1-s1" name="D-7年级1班">Tc.D-7年级1班</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="班级管理">Tc.D-7年级1班.班级管理</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,45 @@
+2021-07-08 20:41:02.908 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: µÇÂ¼, TestCase ID: aa7eeaf7-1375-4675-886a-fac31e84da96
+2021-07-08 20:41:02.908 | INFO     | httprunner.runner:__run_step:292 - run step begin: µÇÂ¼ >>>>>>
+2021-07-08 20:41:03.123 | DEBUG    | httprunner.client:request:186 - client IP: 172.28.5.145, Port: 59684
+2021-07-08 20:41:03.124 | DEBUG    | httprunner.client:request:194 - server IP: 120.55.190.222, Port: 7080
+2021-07-08 20:41:03.124 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://120.55.190.222:7080/api/mgr/loginReq
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-aa7eeaf7-1375-4675-886a-fac31e84da96-062909",
+    "Content-Length": "32",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {}
+body     : username=auto&password=sdfsdfsdf
+
+2021-07-08 20:41:03.126 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "14",
+    "Vary": "Cookie",
+    "Set-Cookie": "sessionid=c1knjnuu1uep8624lms1aq14nc73exuc; HttpOnly; Path=/",
+    "Date": "Thu, 08 Jul 2021 12:41:02 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {
+    "sessionid": "c1knjnuu1uep8624lms1aq14nc73exuc"
+}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0
+}
+
+2021-07-08 20:41:03.126 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 214.27 ms, response_length: 0 bytes
+2021-07-08 20:41:03.126 | INFO     | httprunner.response:extract:176 - extract mapping: {'cookie': 'c1knjnuu1uep8624lms1aq14nc73exuc'}
+2021-07-08 20:41:03.127 | INFO     | httprunner.runner:__run_step:304 - run step end: µÇÂ¼ <<<<<<
+

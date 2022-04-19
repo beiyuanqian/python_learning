@@ -1,0 +1,11 @@
+# -*- coding:utf-8 -*-
+# auto：刘小涵  时间：{2021/6/8}
+
+config: # 用例配置
+  name: test suite demo
+
+testcases: # 测试步骤--对应数据类型：列表
+  - name: case1
+    testcase: testcase\demo.yml  # 测试用例文件路径
+  - name: case2
+    testcase: testcase\login.yml  # 测试用例文件路径

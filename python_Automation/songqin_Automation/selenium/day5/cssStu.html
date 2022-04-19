@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css语法学习</title>
+    <style>
+        /* id选择器 */
+        #abc {
+            color: #cc0000;
+            font-size: 12px;
+        }
+        /* class 选择器 */
+        .dtrbfdhtrghgjg{
+            color: #66cc66;
+        }
+        /* 标签选择器 */
+        p{
+            background: cornflowerblue;
+        }
+        /* 标签选择器可以与class选择器组合使用 */
+        p[class='dtrbfdhtrghgjg']{
+            font-size: 24px
+        }
+        <!-- 组合的另一种用法 -->
+         p.dtrbfdhtrghgjg{
+            color: #cc0000;
+        }
+        /* 分组选择器 */
+        ul,div,.d458987265 {
+            color: #cc0000;
+        }
+        /* 属性选择器 */
+        [href]{
+            color:#cc6600
+        }
+        [title="hello"]{
+            color:#00FFFF
+        }
+        <!-- 属性选择器指定标签时的用法 -->
+        span[title="hello"]{
+            color:#00FFFF
+        }
+        /* 属性选择器匹配单词用法，单词要全 */
+        span[title~="hi"]{
+            font-size: 24px
+        }
+    </style>
+</head>
+<body>
+<p id="abc">金满箱，银满箱，转眼乞丐人皆谤</p>
+<p class="dtrbfdhtrghgjg">无才可去补苍天，枉入红尘若许年</p>
+<p class=>无才可去补苍天，枉入红尘若许年</p>
+
+<ul>
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+</ul>
+<div>
+    <a>好防元宵佳节后，便是烟消火灭时</a>
+</div>
+<a class="d458987265">玉带林中挂，金钗雪里埋</a>
+<br>
+<a href="http://www.baidu.com">转到百度</a>
+<br>
+<a title="hello" name="zhang">未卜三生愿，频添一段愁</a>
+<span title="hello" name="li">未卜三生愿，频添一段愁</span>
+<span title="hi python" >未卜三生愿，频添一段愁</span>
+</body>
+</html>

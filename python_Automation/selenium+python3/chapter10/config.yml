@@ -1,0 +1,8 @@
+# 冒号后要有空格，否则报错yaml.scanner.ScannerError: mapping values are not allowed here
+name: Jack
+age: 23
+children:
+  name: Jason
+  age: 2
+  name_1: Jeff
+  age_1: 4

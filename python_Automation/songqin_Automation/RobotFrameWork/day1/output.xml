@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200606 10:28:59.093" rpa="false">
+<suite id="s1" name="T2" source="D:\PYproject\test\RobotFrameWork\day1\t2.robot">
+<test id="s1-t1" name="case1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://baidu.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200606 10:28:59.219" level="INFO">Opening browser 'chrome' to base url 'http://baidu.com'.</msg>
+<status status="PASS" starttime="20200606 10:28:59.218" endtime="20200606 10:29:05.804"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200606 10:29:05.806" endtime="20200606 10:29:05.807"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=kw</arg>
+<arg>松勤\n</arg>
+</arguments>
+<msg timestamp="20200606 10:29:05.808" level="INFO">Typing text '松勤
+' into text field 'id=kw'.</msg>
+<status status="PASS" starttime="20200606 10:29:05.808" endtime="20200606 10:29:05.923"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=1</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20200606 10:29:07.550" level="INFO">${res} = None</msg>
+<status status="PASS" starttime="20200606 10:29:05.923" endtime="20200606 10:29:07.550"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${res}</arg>
+<arg>松勤网</arg>
+</arguments>
+<msg timestamp="20200606 10:29:07.550" level="FAIL">TypeError: argument of type 'NoneType' is not iterable</msg>
+<status status="FAIL" starttime="20200606 10:29:07.550" endtime="20200606 10:29:07.550"></status>
+</kw>
+<doc>自动化搜搜松勤</doc>
+<status status="FAIL" starttime="20200606 10:28:59.218" endtime="20200606 10:29:07.551" critical="yes">TypeError: argument of type 'NoneType' is not iterable</status>
+</test>
+<test id="s1-t2" name="case2">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>用例2</arg>
+</arguments>
+<status status="PASS" starttime="20200606 10:29:07.555" endtime="20200606 10:29:07.555"></status>
+</kw>
+<status status="PASS" starttime="20200606 10:29:07.555" endtime="20200606 10:29:07.555" critical="yes"></status>
+</test>
+<test id="s1-t3" name="case3">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>用例3</arg>
+</arguments>
+<status status="PASS" starttime="20200606 10:29:07.557" endtime="20200606 10:29:07.557"></status>
+</kw>
+<status status="PASS" starttime="20200606 10:29:07.556" endtime="20200606 10:29:07.560" critical="yes"></status>
+</test>
+<status status="FAIL" starttime="20200606 10:28:59.094" endtime="20200606 10:29:07.562"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1">Critical Tests</stat>
+<stat pass="2" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" id="s1" name="T2">T2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

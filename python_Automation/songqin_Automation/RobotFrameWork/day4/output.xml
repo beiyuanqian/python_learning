@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200609 17:23:54.503" rpa="false">
+<suite id="s1" name="Day4-T2" source="D:\PYproject\test\RobotFrameWork\day4\day4-t2.robot">
+<test id="s1-t1" name="case1">
+<kw name="datadriven">
+<arguments>
+<arg>20200521</arg>
+</arguments>
+<kw name="checklog3" library="rclib">
+<arguments>
+<arg>${data}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expect}</arg>
+</arguments>
+<assign>
+<var>${var}</var>
+</assign>
+<msg timestamp="20200609 17:23:54.523" level="INFO">${var} = 20200521</msg>
+<status status="PASS" starttime="20200609 17:23:54.523" endtime="20200609 17:23:54.523"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${var}</arg>
+</arguments>
+<status status="PASS" starttime="20200609 17:23:54.524" endtime="20200609 17:23:54.524"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$var==$expect</arg>
+</arguments>
+<status status="PASS" starttime="20200609 17:23:54.524" endtime="20200609 17:23:54.527"></status>
+</kw>
+<msg timestamp="20200609 17:23:54.527" level="INFO">${res} = Sucess</msg>
+<status status="PASS" starttime="20200609 17:23:54.523" endtime="20200609 17:23:54.527"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${res}</arg>
+</arguments>
+<status status="PASS" starttime="20200609 17:23:54.527" endtime="20200609 17:23:54.528"></status>
+</kw>
+<status status="PASS" starttime="20200609 17:23:54.523" endtime="20200609 17:23:54.528"></status>
+</kw>
+<kw name="datadriven">
+<arguments>
+<arg>20200522</arg>
+</arguments>
+<kw name="checklog3" library="rclib">
+<arguments>
+<arg>${data}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expect}</arg>
+</arguments>
+<assign>
+<var>${var}</var>
+</assign>
+<msg timestamp="20200609 17:23:54.528" level="INFO">${var} = 20200522</msg>
+<status status="PASS" starttime="20200609 17:23:54.528" endtime="20200609 17:23:54.529"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${var}</arg>
+</arguments>
+<status status="PASS" starttime="20200609 17:23:54.529" endtime="20200609 17:23:54.529"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$var==$expect</arg>
+</arguments>
+<status status="PASS" starttime="20200609 17:23:54.529" endtime="20200609 17:23:54.529"></status>
+</kw>
+<msg timestamp="20200609 17:23:54.529" level="INFO">${res} = Sucess</msg>
+<status status="PASS" starttime="20200609 17:23:54.528" endtime="20200609 17:23:54.529"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${res}</arg>
+</arguments>
+<status status="PASS" starttime="20200609 17:23:54.529" endtime="20200609 17:23:54.529"></status>
+</kw>
+<status status="PASS" starttime="20200609 17:23:54.528" endtime="20200609 17:23:54.529"></status>
+</kw>
+<status status="PASS" starttime="20200609 17:23:54.522" endtime="20200609 17:23:54.530" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200609 17:23:54.505" endtime="20200609 17:23:54.531"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Day4-T2">Day4-T2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

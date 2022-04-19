@@ -1,0 +1,12 @@
+{% extends "sgin/base.html" %}
+    {% block maintitle %}
+        <h1>这里是嘉宾列表</h1>
+        <a href="/sgin/add_event_page" class="btn btn-info navbar-right">添加发布会</a>
+    {% endblock %}
+    {% block content %}
+        <ul class="list-group">
+            {%  for event in event_list %}
+                <li class="list-group-item text-center"><a href="/sgin/event_detail/{{ event.id }}">{{ event }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endblock %}

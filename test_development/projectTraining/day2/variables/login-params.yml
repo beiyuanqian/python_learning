@@ -1,0 +1,55 @@
+# -*- coding:utf-8 -*-
+# auto：刘小涵  时间：{2021/6/8}
+
+#config: # 用例配置区
+#  name: 登录
+#  base_url: http://120.55.190.222:7080
+#  verify: false # 非https模式
+#  parameters:
+#    user: # 独立参数，共8种结果
+#      - auto
+#      - auto1
+#      psw:
+#        - sdfsdfsdf
+#        - sdfsdf
+#      code:
+#        - 0
+#        - 1
+
+
+#config: # 用例配置区
+#  name: 登录
+#  base_url: http://120.55.190.222:7080
+#  verify: false # 非https模式
+#  parameters:
+##    user-psw-code: # 关联参数，该格式共有两组参数
+##      - ['auto','sdfsdfsdf',0]
+##      - ['auto1','sdfsdf',1]
+#    user-psw: # 关联参数，该格式共有四组
+#      - ['auto','sdfsdfsdf']
+#      - ['auto1','sdfsdf']
+#    code:
+#      - 0
+#      - 1
+
+config: # 用例配置区
+  name: 登录
+  base_url: http://120.55.190.222:7080
+  verify: false # 非https模式
+  parameters:
+    user-psw-code: ${login_parameters()} # 函数参数
+
+
+
+teststeps: # 测试步骤--对应数据类型：列表
+  - name: 登录
+    request:
+      method: POST
+      url: /api/mgr/loginReq
+      data:
+        username: ${user}
+        password: ${psw}
+    extract: # 对应数据格式-字典
+      cookie: cookies.sessionid # 将sessionid赋值给cookie变量
+    validate:
+      - eq: ['body.retcode',$code]

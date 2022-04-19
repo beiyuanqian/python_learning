@@ -1,0 +1,118 @@
+2021-07-15 20:03:20.520 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: 修改课程, TestCase ID: 18186dbc-4fbc-4a87-b1ec-012b76748933
+2021-07-15 20:03:20.521 | INFO     | httprunner.runner:__run_step:292 - run step begin: 添加课程 >>>>>>
+2021-07-15 20:03:20.521 | INFO     | httprunner.runner:__run_step:292 - run step begin: 登录 >>>>>>
+2021-07-15 20:03:20.522 | INFO     | httprunner.runner:__run_step:292 - run step begin: 登录 >>>>>>
+2021-07-15 20:03:20.728 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 53335
+2021-07-15 20:03:20.728 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-07-15 20:03:20.730 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://120.55.190.222:7080/api/mgr/loginReq
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-18186dbc-4fbc-4a87-b1ec-012b76748933-600522",
+    "Content-Length": "32",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {}
+body     : username=auto&password=sdfsdfsdf
+
+2021-07-15 20:03:20.730 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "14",
+    "Vary": "Cookie",
+    "Set-Cookie": "sessionid=x676yvuo614aytg0mp7ukgxfehvf6wd2; HttpOnly; Path=/",
+    "Date": "Thu, 15 Jul 2021 12:03:21 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {
+    "sessionid": "x676yvuo614aytg0mp7ukgxfehvf6wd2"
+}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0
+}
+
+2021-07-15 20:03:20.731 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 205.4 ms, response_length: 0 bytes
+2021-07-15 20:03:20.731 | INFO     | httprunner.response:extract:176 - extract mapping: {'cookie': 'x676yvuo614aytg0mp7ukgxfehvf6wd2'}
+2021-07-15 20:03:20.732 | INFO     | httprunner.runner:__run_step:304 - run step end: 登录 <<<<<<
+
+2021-07-15 20:03:20.732 | INFO     | httprunner.runner:__run_step_testcase:286 - export variables: {'cookie': 'x676yvuo614aytg0mp7ukgxfehvf6wd2'}
+2021-07-15 20:03:20.733 | INFO     | httprunner.runner:__run_step:304 - run step end: 登录 <<<<<<
+
+2021-07-15 20:03:20.733 | INFO     | httprunner.runner:__run_step:292 - run step begin: 添加课程 >>>>>>
+2021-07-15 20:03:20.810 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 53335
+2021-07-15 20:03:20.810 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-07-15 20:03:20.811 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://120.55.190.222:7080/api/mgr/sq_mgr/
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-18186dbc-4fbc-4a87-b1ec-012b76748933-600733",
+    "Cookie": "sessionid=x676yvuo614aytg0mp7ukgxfehvf6wd2; sessionid=x676yvuo614aytg0mp7ukgxfehvf6wd2",
+    "Content-Length": "190",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {
+    "sessionid": "x676yvuo614aytg0mp7ukgxfehvf6wd2"
+}
+body     : action=add_course&data=%7B%22name%22%3A%22%E5%88%9D%E4%B8%AD%E5%8C%96%E5%AD%A6%22%2C%22desc%22%3A%22%E5%88%9D%E4%B8%AD%E5%8C%96%E5%AD%A6%E8%AF%BE%E7%A8%8B%22%2C%22display_idx%22%3A%224%22%7D
+
+2021-07-15 20:03:20.812 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "64",
+    "Vary": "Cookie",
+    "Date": "Thu, 15 Jul 2021 12:03:21 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 2,
+    "reason": "\u540c\u540d\u8bfe\u7a0b\u5b58\u5728"
+}
+
+2021-07-15 20:03:20.812 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 76.1 ms, response_length: 0 bytes
+2021-07-15 20:03:20.813 | INFO     | httprunner.response:extract:176 - extract mapping: {'course_id': None}
+2021-07-15 20:03:20.813 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-07-15 20:03:20.813 | ERROR    | httprunner.response:validate:263 - assert body.retcode equal 0(int)	==> fail
+check_item: body.retcode
+check_value: 2(int)
+assert_method: equal
+expect_value: 0(int)
+2021-07-15 20:03:20.814 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: http://120.55.190.222:7080/api/mgr/sq_mgr/
+method: POST
+headers: {'HRUN-Request-ID': 'HRUN-18186dbc-4fbc-4a87-b1ec-012b76748933-600733'}
+params: {}
+data: {'action': 'add_course', 'data': '{"name":"初中化学","desc":"初中化学课程","display_idx":"4"}'}
+cookies: {'sessionid': 'x676yvuo614aytg0mp7ukgxfehvf6wd2'}
+timeout: 120
+allow_redirects: True
+verify: False
+json: None
+
+====== response details ======
+status_code: 200
+headers: {'Content-Type': 'application/json', 'X-Frame-Options': 'SAMEORIGIN', 'Content-Length': '64', 'Vary': 'Cookie', 'Date': 'Thu, 15 Jul 2021 12:03:21 GMT', 'Server': '0.0.0.0'}
+body: '{"retcode": 2, "reason": "\\u540c\\u540d\\u8bfe\\u7a0b\\u5b58\\u5728"}'
+

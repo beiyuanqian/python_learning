@@ -1,0 +1,145 @@
+2021-07-08 21:17:14.133 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: ÐÞ¸Ä¿Î³Ì, TestCase ID: f35c8a78-d41b-4601-9f7d-edef7cd0245f
+2021-07-08 21:17:14.134 | INFO     | httprunner.runner:__run_step:292 - run step begin: Ìí¼Ó¿Î³Ì >>>>>>
+2021-07-08 21:17:14.134 | INFO     | httprunner.runner:__run_step:292 - run step begin: µÇÂ¼ >>>>>>
+2021-07-08 21:17:14.135 | INFO     | httprunner.runner:__run_step:292 - run step begin: µÇÂ¼ >>>>>>
+2021-07-08 21:17:14.384 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 51438
+2021-07-08 21:17:14.385 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-07-08 21:17:14.386 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://120.55.190.222:7080/api/mgr/loginReq
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-f35c8a78-d41b-4601-9f7d-edef7cd0245f-234135",
+    "Content-Length": "32",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {}
+body     : username=auto&password=sdfsdfsdf
+
+2021-07-08 21:17:14.387 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "14",
+    "Vary": "Cookie",
+    "Set-Cookie": "sessionid=32omtomf9ddlk9lnsqhcxldt12q47kjz; HttpOnly; Path=/",
+    "Date": "Thu, 08 Jul 2021 13:17:13 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {
+    "sessionid": "32omtomf9ddlk9lnsqhcxldt12q47kjz"
+}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0
+}
+
+2021-07-08 21:17:14.387 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 248.66 ms, response_length: 0 bytes
+2021-07-08 21:17:14.387 | INFO     | httprunner.response:extract:176 - extract mapping: {'cookie': '32omtomf9ddlk9lnsqhcxldt12q47kjz'}
+2021-07-08 21:17:14.388 | INFO     | httprunner.runner:__run_step:304 - run step end: µÇÂ¼ <<<<<<
+
+2021-07-08 21:17:14.388 | INFO     | httprunner.runner:__run_step_testcase:286 - export variables: {'cookie': '32omtomf9ddlk9lnsqhcxldt12q47kjz'}
+2021-07-08 21:17:14.389 | INFO     | httprunner.runner:__run_step:304 - run step end: µÇÂ¼ <<<<<<
+
+2021-07-08 21:17:14.389 | INFO     | httprunner.runner:__run_step:292 - run step begin: Ìí¼Ó¿Î³Ì >>>>>>
+2021-07-08 21:17:14.453 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 51438
+2021-07-08 21:17:14.454 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-07-08 21:17:14.454 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://120.55.190.222:7080/api/mgr/sq_mgr/
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-f35c8a78-d41b-4601-9f7d-edef7cd0245f-234389",
+    "Cookie": "sessionid=32omtomf9ddlk9lnsqhcxldt12q47kjz; sessionid=32omtomf9ddlk9lnsqhcxldt12q47kjz",
+    "Content-Length": "190",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {
+    "sessionid": "32omtomf9ddlk9lnsqhcxldt12q47kjz"
+}
+body     : action=add_course&data=%7B%22name%22%3A%22%E5%88%9D%E4%B8%AD%E5%8C%96%E5%AD%A6%22%2C%22desc%22%3A%22%E5%88%9D%E4%B8%AD%E5%8C%96%E5%AD%A6%E8%AF%BE%E7%A8%8B%22%2C%22display_idx%22%3A%224%22%7D
+
+2021-07-08 21:17:14.455 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "26",
+    "Vary": "Cookie",
+    "Date": "Thu, 08 Jul 2021 13:17:13 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0,
+    "id": 3462
+}
+
+2021-07-08 21:17:14.455 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 63.49 ms, response_length: 0 bytes
+2021-07-08 21:17:14.455 | INFO     | httprunner.response:extract:176 - extract mapping: {'course_id': 3462}
+2021-07-08 21:17:14.456 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-07-08 21:17:14.457 | INFO     | httprunner.response:validate:246 - assert body.retcode equal 0(int)	==> pass
+2021-07-08 21:17:14.457 | INFO     | httprunner.runner:__run_step:304 - run step end: Ìí¼Ó¿Î³Ì <<<<<<
+
+2021-07-08 21:17:14.457 | INFO     | httprunner.runner:__run_step_testcase:286 - export variables: {'cookie': '32omtomf9ddlk9lnsqhcxldt12q47kjz', 'course_id': 3462}
+2021-07-08 21:17:14.457 | INFO     | httprunner.runner:__run_step:304 - run step end: Ìí¼Ó¿Î³Ì <<<<<<
+
+2021-07-08 21:17:14.458 | INFO     | httprunner.runner:__run_step:292 - run step begin: ÐÞ¸Ä¿Î³Ì >>>>>>
+2021-07-08 21:17:14.528 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 51438
+2021-07-08 21:17:14.528 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-07-08 21:17:14.529 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : PUT
+url      : http://120.55.190.222:7080/api/mgr/sq_mgr/
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-f35c8a78-d41b-4601-9f7d-edef7cd0245f-234459",
+    "Cookie": "sessionid=32omtomf9ddlk9lnsqhcxldt12q47kjz; sessionid=32omtomf9ddlk9lnsqhcxldt12q47kjz",
+    "Content-Length": "222",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {
+    "sessionid": "32omtomf9ddlk9lnsqhcxldt12q47kjz"
+}
+body     : action=modify_course&id=3462&newdata=%7B%22name%22%3A%22%E5%88%9D%E4%B8%AD%E8%AE%A1%E7%AE%97%E6%9C%BA%22%2C%22desc%22%3A%22%E5%88%9D%E4%B8%AD%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%BE%E7%A8%8B%22%2C%22display_idx%22%3A%224%22%7D
+
+2021-07-08 21:17:14.530 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "14",
+    "Vary": "Cookie",
+    "Date": "Thu, 08 Jul 2021 13:17:13 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0
+}
+
+2021-07-08 21:17:14.530 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 68.78 ms, response_length: 0 bytes
+2021-07-08 21:17:14.530 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-07-08 21:17:14.531 | INFO     | httprunner.response:validate:246 - assert body.retcode equal 0(int)	==> pass
+2021-07-08 21:17:14.532 | INFO     | httprunner.runner:__run_step:304 - run step end: ÐÞ¸Ä¿Î³Ì <<<<<<
+

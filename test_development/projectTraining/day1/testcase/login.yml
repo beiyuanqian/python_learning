@@ -1,0 +1,22 @@
+# -*- coding:utf-8 -*-
+# auto：刘小涵  时间：{2021/6/8}
+
+config: # 用例配置
+  name: 登录
+  base_url: http://120.55.190.222:7080
+  verify: false  # 非https模式
+  export: # 返回测试步骤中提取的变量-对应的数据类型-列表
+  -
+    cookie
+
+teststeps: # 测试步骤--对应数据类型：列表
+-
+    name: 登录
+    request:
+      method: POST
+      url: /api/mgr/loginReq
+      data:
+        username: auto
+        password: sdfsdfsdf
+    extract: # 对应数据格式-字典
+      cookie: cookies.sessionid # 将sessionid赋值给cookie变量

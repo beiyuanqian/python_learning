@@ -1,0 +1,5 @@
+05/23/2020 15:54:33 PM - DEBUG - I am a debug level log.
+05/23/2020 15:54:33 PM - INFO - I am a info level log.
+05/23/2020 15:54:33 PM - WARNING - I am a warning level log.
+05/23/2020 15:54:33 PM - ERROR - I am a error level log.
+05/23/2020 15:54:33 PM - CRITICAL - I am a critical level log.

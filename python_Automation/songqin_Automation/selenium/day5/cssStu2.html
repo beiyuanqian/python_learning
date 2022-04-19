@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 后代选择器(用空格表示) */
+        div li{
+            background: forestgreen;
+        }
+        /* 子元素选择器（不能隔代,>是直接子元素）,css语法不能以数字开头*/
+        div[id="dggfcggcf"] > ul{
+            color:#cc6600
+        }
+        /* 相邻兄弟选择器(可以继续加) */
+        #xcbvbb + li{
+            font-size: 24px
+        }
+        /* 后续兄弟选择器 */
+        #qwrryutyy~li{
+            color:#cc0000;
+        }
+
+    </style>
+</head>
+<body>
+<div id="dggfcggcf">
+    <p>时逢三五便团圆</p>
+    <ul>
+        <li id="xcbvbb">元春</li>
+        <li>迎春</li>
+        <li>探春</li>
+        <li>惜春</li>
+    </ul>
+    <div>
+        <ul>
+        <li id="qwrryutyy">贾</li>
+        <li>史</li>
+        <li>王</li>
+        <li>薛</li>
+    </ul>
+    </div>
+</div>
+</body>
+</html>

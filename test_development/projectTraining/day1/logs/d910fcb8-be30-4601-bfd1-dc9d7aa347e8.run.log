@@ -1,0 +1,135 @@
+2021-07-08 20:05:33.958 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: ÁÐ³ö¿Î³Ì²âÊÔ, TestCase ID: d910fcb8-be30-4601-bfd1-dc9d7aa347e8
+2021-07-08 20:05:33.959 | INFO     | httprunner.runner:__run_step:292 - run step begin: µÇÂ¼ >>>>>>
+2021-07-08 20:05:33.960 | INFO     | httprunner.runner:__run_step:292 - run step begin: µÇÂ¼ >>>>>>
+2021-07-08 20:05:34.105 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 60763
+2021-07-08 20:05:34.106 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-07-08 20:05:34.107 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://120.55.190.222:7080/api/mgr/loginReq
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-d910fcb8-be30-4601-bfd1-dc9d7aa347e8-933960",
+    "Content-Length": "32",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {}
+body     : username=auto&password=sdfsdfsdf
+
+2021-07-08 20:05:34.108 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "14",
+    "Vary": "Cookie",
+    "Set-Cookie": "sessionid=zew5kikxwjt1fhno4vs248cnk1juo8js; HttpOnly; Path=/",
+    "Date": "Thu, 08 Jul 2021 12:05:33 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {
+    "sessionid": "zew5kikxwjt1fhno4vs248cnk1juo8js"
+}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0
+}
+
+2021-07-08 20:05:34.108 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 145.11 ms, response_length: 0 bytes
+2021-07-08 20:05:34.109 | INFO     | httprunner.response:extract:176 - extract mapping: {'cookie': 'zew5kikxwjt1fhno4vs248cnk1juo8js'}
+2021-07-08 20:05:34.110 | INFO     | httprunner.runner:__run_step:304 - run step end: µÇÂ¼ <<<<<<
+
+2021-07-08 20:05:34.110 | INFO     | httprunner.runner:__run_step_testcase:286 - export variables: {'cookie': 'zew5kikxwjt1fhno4vs248cnk1juo8js'}
+2021-07-08 20:05:34.110 | INFO     | httprunner.runner:__run_step:304 - run step end: µÇÂ¼ <<<<<<
+
+2021-07-08 20:05:34.111 | INFO     | httprunner.runner:__run_step:292 - run step begin: ²½Öè¶þ-ÁÐ³ö¿Î³Ì >>>>>>
+2021-07-08 20:05:34.176 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 60763
+2021-07-08 20:05:34.176 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-07-08 20:05:34.177 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : http://120.55.190.222:7080/api/mgr/sq_mgr/?action=list_course&pagenum=1&pagesize=20
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-d910fcb8-be30-4601-bfd1-dc9d7aa347e8-934111",
+    "Cookie": "sessionid=zew5kikxwjt1fhno4vs248cnk1juo8js; sessionid=zew5kikxwjt1fhno4vs248cnk1juo8js"
+}
+cookies  : {
+    "sessionid": "zew5kikxwjt1fhno4vs248cnk1juo8js"
+}
+body     : None
+
+2021-07-08 20:05:34.178 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "350",
+    "Vary": "Cookie",
+    "Date": "Thu, 08 Jul 2021 12:05:33 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0,
+    "retlist": [
+        {
+            "id": 3021,
+            "name": "\u677e\u52e4\u6d4b\u5f00",
+            "desc": "\u677e\u52e4\u6d4b\u5f00\u8bfe\u7a0b",
+            "display_idx": 1
+        },
+        {
+            "id": 3312,
+            "name": "JavaScript",
+            "desc": "so easy",
+            "display_idx": 1
+        },
+        {
+            "id": 3458,
+            "name": "\u521d\u4e2d\u5316\u5b66852645",
+            "desc": "\u521d\u4e2d\u5316\u5b66\u8bfe\u7a0b",
+            "display_idx": 4
+        }
+    ],
+    "total": 3
+}
+
+2021-07-08 20:05:34.178 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 64.69 ms, response_length: 0 bytes
+2021-07-08 20:05:34.179 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-07-08 20:05:34.179 | INFO     | httprunner.response:validate:246 - assert body.retcode equal 0(int)	==> pass
+2021-07-08 20:05:34.180 | ERROR    | httprunner.response:validate:263 - assert body.total equal 1(int)	==> fail
+check_item: body.total
+check_value: 3(int)
+assert_method: equal
+expect_value: 1(int)
+2021-07-08 20:05:34.181 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: http://120.55.190.222:7080/api/mgr/sq_mgr/
+method: GET
+headers: {'HRUN-Request-ID': 'HRUN-d910fcb8-be30-4601-bfd1-dc9d7aa347e8-934111'}
+params: {'action': 'list_course', 'pagenum': 1, 'pagesize': 20}
+data: None
+cookies: {'sessionid': 'zew5kikxwjt1fhno4vs248cnk1juo8js'}
+timeout: 120
+allow_redirects: True
+verify: False
+json: None
+
+====== response details ======
+status_code: 200
+headers: {'Content-Type': 'application/json', 'X-Frame-Options': 'SAMEORIGIN', 'Content-Length': '350', 'Vary': 'Cookie', 'Date': 'Thu, 08 Jul 2021 12:05:33 GMT', 'Server': '0.0.0.0'}
+body: '{"retcode": 0, "retlist": [{"id": 3021, "name": "\\u677e\\u52e4\\u6d4b\\u5f00", "desc": "\\u677e\\u52e4\\u6d4b\\u5f00\\u8bfe\\u7a0b", "display_idx": 1}, {"id": 3312, "name": "JavaScript", "desc": "so easy", "display_idx": 1}, {"id": 3458, "name": "\\u521d\\u4e2d\\u5316\\u5b66852645", "desc": "\\u521d\\u4e2d\\u5316\\u5b66\\u8bfe\\u7a0b", "display_idx": 4}], "total": 3}'
+

@@ -1,0 +1,26 @@
+# -*- coding:utf-8 -*-
+# auto：刘小涵  时间：{2021/6/10}
+
+config:
+  name: 删除课程
+  verify: false
+  base_url: http://120.55.190.222:7080
+
+
+teststeps:
+#-
+#  name: 添加并修改课程
+#  testcase: testcase2/update_suite.yml
+-
+  name: 删除课程
+  request:
+    method: DELETE
+    url: /api/mgr/sq_mgr/
+    data:
+      action: delete_course
+      id: ${course_id}
+    cookies:
+      sessionid: ${cookie}
+  validate:
+  - eq: ['status_code',200,]
+  - eq: ['body.retcode',0]

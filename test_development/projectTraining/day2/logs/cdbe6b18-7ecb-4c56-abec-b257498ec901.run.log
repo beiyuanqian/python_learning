@@ -1,0 +1,46 @@
+2021-07-15 20:03:20.848 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: É¾³ı¿Î³Ì, TestCase ID: cdbe6b18-7ecb-4c56-abec-b257498ec901
+2021-07-15 20:03:20.848 | INFO     | httprunner.runner:__run_step:292 - run step begin: É¾³ı¿Î³Ì >>>>>>
+2021-07-15 20:03:20.937 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 53336
+2021-07-15 20:03:20.938 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-07-15 20:03:20.939 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : DELETE
+url      : http://120.55.190.222:7080/api/mgr/sq_mgr/
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-cdbe6b18-7ecb-4c56-abec-b257498ec901-600849",
+    "Cookie": "sessionid=hhfybrqt1hmexng05gmoirsmbsezfub9",
+    "Content-Length": "28",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {
+    "sessionid": "hhfybrqt1hmexng05gmoirsmbsezfub9"
+}
+body     : action=delete_course&id=3504
+
+2021-07-15 20:03:20.940 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "14",
+    "Vary": "Cookie",
+    "Date": "Thu, 15 Jul 2021 12:03:21 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0
+}
+
+2021-07-15 20:03:20.941 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 88.47 ms, response_length: 0 bytes
+2021-07-15 20:03:20.941 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-07-15 20:03:20.942 | INFO     | httprunner.response:validate:246 - assert body.retcode equal 0(int)	==> pass
+2021-07-15 20:03:20.942 | INFO     | httprunner.runner:__run_step:304 - run step end: É¾³ı¿Î³Ì <<<<<<
+

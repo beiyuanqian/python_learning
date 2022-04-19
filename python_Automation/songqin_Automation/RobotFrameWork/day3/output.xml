@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200608 19:37:37.273" rpa="false">
+<suite id="s1" name="Day3-T5" source="D:\PYproject\test\RobotFrameWork\day3\day3-t5.robot">
+<kw name="Log To Console" library="BuiltIn" type="setup">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>执行套件初始化</arg>
+</arguments>
+<status status="PASS" starttime="20200608 19:37:37.290" endtime="20200608 19:37:37.291"></status>
+</kw>
+<test id="s1-t1" name="setupANDteardown">
+<kw name="Fail" library="BuiltIn" type="setup">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20200608 19:37:37.291" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20200608 19:37:37.291" endtime="20200608 19:37:37.291"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn" type="teardown">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>执行用例清除动作</arg>
+</arguments>
+<status status="PASS" starttime="20200608 19:37:37.291" endtime="20200608 19:37:37.292"></status>
+</kw>
+<status status="FAIL" starttime="20200608 19:37:37.291" endtime="20200608 19:37:37.292" critical="yes">Setup failed:
+AssertionError</status>
+</test>
+<test id="s1-t2" name="setupANDteardown1">
+<kw name="Log To Console" library="BuiltIn" type="setup">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>执行用例初始化动作</arg>
+</arguments>
+<status status="PASS" starttime="20200608 19:37:37.293" endtime="20200608 19:37:37.293"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>执行用例主体</arg>
+</arguments>
+<status status="PASS" starttime="20200608 19:37:37.293" endtime="20200608 19:37:37.294"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>1&lt;2</arg>
+</arguments>
+<status status="PASS" starttime="20200608 19:37:37.294" endtime="20200608 19:37:37.294"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn" type="teardown">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>执行默认清除</arg>
+</arguments>
+<status status="PASS" starttime="20200608 19:37:37.295" endtime="20200608 19:37:37.295"></status>
+</kw>
+<status status="PASS" starttime="20200608 19:37:37.293" endtime="20200608 19:37:37.295" critical="yes"></status>
+</test>
+<test id="s1-t3" name="setupANDteardown2">
+<kw name="Log To Console" library="BuiltIn" type="setup">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>执行默认初始化</arg>
+</arguments>
+<status status="PASS" starttime="20200608 19:37:37.296" endtime="20200608 19:37:37.296"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>执行用例主体</arg>
+</arguments>
+<status status="PASS" starttime="20200608 19:37:37.296" endtime="20200608 19:37:37.296"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>1&lt;2</arg>
+</arguments>
+<status status="PASS" starttime="20200608 19:37:37.296" endtime="20200608 19:37:37.297"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn" type="teardown">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>执行用例清除动作</arg>
+</arguments>
+<status status="PASS" starttime="20200608 19:37:37.297" endtime="20200608 19:37:37.297"></status>
+</kw>
+<status status="PASS" starttime="20200608 19:37:37.295" endtime="20200608 19:37:37.298" critical="yes"></status>
+</test>
+<kw name="Log To Console" library="BuiltIn" type="teardown">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>执行套件清除动作</arg>
+</arguments>
+<status status="PASS" starttime="20200608 19:37:37.298" endtime="20200608 19:37:37.299"></status>
+</kw>
+<status status="FAIL" starttime="20200608 19:37:37.274" endtime="20200608 19:37:37.299"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1">Critical Tests</stat>
+<stat pass="2" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" id="s1" name="Day3-T5">Day3-T5</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

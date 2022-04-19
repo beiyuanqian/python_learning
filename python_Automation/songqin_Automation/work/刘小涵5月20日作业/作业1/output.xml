@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200608 20:23:31.378" rpa="false">
+<suite id="s1" name="Ti" source="D:\PYproject\test\work\刘小涵5月20日作业\作业1\ti.robot">
+<test id="s1-t1" name="case1">
+<kw name="listCourse">
+<assign>
+<var>${course}</var>
+</assign>
+<msg timestamp="20200608 20:23:31.398" level="FAIL">No keyword with name 'listCourse' found.</msg>
+<status status="FAIL" starttime="20200608 20:23:31.398" endtime="20200608 20:23:31.398"></status>
+</kw>
+<status status="FAIL" starttime="20200608 20:23:31.397" endtime="20200608 20:23:31.399" critical="yes">No keyword with name 'listCourse' found.</status>
+</test>
+<status status="FAIL" starttime="20200608 20:23:31.379" endtime="20200608 20:23:31.399"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Ti">Ti</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200608 20:23:31.395" level="ERROR">Error in file 'D:\PYproject\test\work\刘小涵5月20日作业\作业1\ti.robot' on line 2: Importing test library 'course_mgr' failed: ModuleNotFoundError: No module named 'course_mgr'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  D:\Program Files\Python38\Scripts\robot.exe
+  d:\program files\python38\python38.zip
+  d:\program files\python38\DLLs
+  d:\program files\python38\lib
+  d:\program files\python38
+  C:\Users\gree\AppData\Roaming\Python\Python38\site-packages
+  d:\program files\python38\lib\site-packages
+  d:\program files\python38\lib\site-packages\win32
+  d:\program files\python38\lib\site-packages\win32\lib
+  d:\program files\python38\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

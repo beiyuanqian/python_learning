@@ -1,0 +1,45 @@
+2021-07-08 20:09:25.083 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: case2, TestCase ID: 78e22029-e6b0-42e7-9ee2-ea32eedaf5f3
+2021-07-08 20:09:25.084 | INFO     | httprunner.runner:__run_step:292 - run step begin: µÇÂ¼ >>>>>>
+2021-07-08 20:09:25.272 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 63539
+2021-07-08 20:09:25.273 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-07-08 20:09:25.274 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://120.55.190.222:7080/api/mgr/loginReq
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-78e22029-e6b0-42e7-9ee2-ea32eedaf5f3-165084",
+    "Content-Length": "32",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {}
+body     : username=auto&password=sdfsdfsdf
+
+2021-07-08 20:09:25.274 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "14",
+    "Vary": "Cookie",
+    "Set-Cookie": "sessionid=yr8h81mfnv8gzpkwpnttqbii4n00aoid; HttpOnly; Path=/",
+    "Date": "Thu, 08 Jul 2021 12:09:24 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {
+    "sessionid": "yr8h81mfnv8gzpkwpnttqbii4n00aoid"
+}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0
+}
+
+2021-07-08 20:09:25.275 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 188.14 ms, response_length: 0 bytes
+2021-07-08 20:09:25.275 | INFO     | httprunner.response:extract:176 - extract mapping: {'cookie': 'yr8h81mfnv8gzpkwpnttqbii4n00aoid'}
+2021-07-08 20:09:25.276 | INFO     | httprunner.runner:__run_step:304 - run step end: µÇÂ¼ <<<<<<
+

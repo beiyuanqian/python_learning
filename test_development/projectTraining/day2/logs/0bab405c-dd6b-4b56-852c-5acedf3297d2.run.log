@@ -1,0 +1,113 @@
+2021-07-08 20:41:02.617 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: 列出课程测试, TestCase ID: 0bab405c-dd6b-4b56-852c-5acedf3297d2
+2021-07-08 20:41:02.617 | INFO     | httprunner.runner:__run_step:292 - run step begin: 登录 >>>>>>
+2021-07-08 20:41:02.618 | INFO     | httprunner.runner:__run_step:292 - run step begin: 登录 >>>>>>
+2021-07-08 20:41:02.841 | DEBUG    | httprunner.client:request:186 - client IP: 172.28.5.145, Port: 59683
+2021-07-08 20:41:02.841 | DEBUG    | httprunner.client:request:194 - server IP: 120.55.190.222, Port: 7080
+2021-07-08 20:41:02.842 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://120.55.190.222:7080/api/mgr/loginReq
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-0bab405c-dd6b-4b56-852c-5acedf3297d2-062619",
+    "Content-Length": "32",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+cookies  : {}
+body     : username=auto&password=sdfsdfsdf
+
+2021-07-08 20:41:02.843 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "14",
+    "Vary": "Cookie",
+    "Set-Cookie": "sessionid=fw83e22u52ry5kfvaev06zgjh5en2nfl; HttpOnly; Path=/",
+    "Date": "Thu, 08 Jul 2021 12:41:02 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {
+    "sessionid": "fw83e22u52ry5kfvaev06zgjh5en2nfl"
+}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0
+}
+
+2021-07-08 20:41:02.843 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 222.21 ms, response_length: 0 bytes
+2021-07-08 20:41:02.844 | INFO     | httprunner.response:extract:176 - extract mapping: {'cookie': 'fw83e22u52ry5kfvaev06zgjh5en2nfl'}
+2021-07-08 20:41:02.845 | INFO     | httprunner.runner:__run_step:304 - run step end: 登录 <<<<<<
+
+2021-07-08 20:41:02.845 | INFO     | httprunner.runner:__run_step_testcase:286 - export variables: {'cookie': 'fw83e22u52ry5kfvaev06zgjh5en2nfl'}
+2021-07-08 20:41:02.845 | INFO     | httprunner.runner:__run_step:304 - run step end: 登录 <<<<<<
+
+2021-07-08 20:41:02.846 | INFO     | httprunner.runner:__run_step:292 - run step begin: 步骤二-列出课程 >>>>>>
+2021-07-08 20:41:02.898 | DEBUG    | httprunner.client:request:186 - client IP: 172.28.5.145, Port: 59683
+2021-07-08 20:41:02.899 | DEBUG    | httprunner.client:request:194 - server IP: 120.55.190.222, Port: 7080
+2021-07-08 20:41:02.900 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : http://120.55.190.222:7080/api/mgr/sq_mgr/?action=list_course&pagenum=1&pagesize=20
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-0bab405c-dd6b-4b56-852c-5acedf3297d2-062846",
+    "Cookie": "sessionid=fw83e22u52ry5kfvaev06zgjh5en2nfl; sessionid=fw83e22u52ry5kfvaev06zgjh5en2nfl"
+}
+cookies  : {
+    "sessionid": "fw83e22u52ry5kfvaev06zgjh5en2nfl"
+}
+body     : None
+
+2021-07-08 20:41:02.900 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Length": "350",
+    "Vary": "Cookie",
+    "Date": "Thu, 08 Jul 2021 12:41:02 GMT",
+    "Server": "0.0.0.0"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "retcode": 0,
+    "retlist": [
+        {
+            "id": 3021,
+            "name": "\u677e\u52e4\u6d4b\u5f00",
+            "desc": "\u677e\u52e4\u6d4b\u5f00\u8bfe\u7a0b",
+            "display_idx": 1
+        },
+        {
+            "id": 3312,
+            "name": "JavaScript",
+            "desc": "so easy",
+            "display_idx": 1
+        },
+        {
+            "id": 3458,
+            "name": "\u521d\u4e2d\u5316\u5b66852645",
+            "desc": "\u521d\u4e2d\u5316\u5b66\u8bfe\u7a0b",
+            "display_idx": 4
+        }
+    ],
+    "total": 3
+}
+
+2021-07-08 20:41:02.901 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 51.61 ms, response_length: 0 bytes
+2021-07-08 20:41:02.902 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-07-08 20:41:02.902 | INFO     | httprunner.response:validate:246 - assert body.retcode equal 0(int)	==> pass
+2021-07-08 20:41:02.902 | INFO     | httprunner.runner:__run_step:304 - run step end: 步骤二-列出课程 <<<<<<
+

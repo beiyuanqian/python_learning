@@ -1,0 +1,27 @@
+除了USB方式连接Android终端设备，还有一种方法是通过adb connect命令利用TCP/IP协议来连接。毕竟，PC端的USB口也是有限的。
+
+Step1：
+
+设置手机和PC在同一网络下，即连接同一WIFI；用USB连接手机；在终端输入：
+
+1  adb tcpip 5555
+
+ 解释：5555 端口是默认端口，也可以用其他端口
+
+Step2：
+
+断开手机与PC的USB连接，在终端输入：
+
+adb connect IP:5555, 比如这样：
+
+adb connect 192.168.107.132:5555
+
+终端会返回：connected to 192.168.107.132:5555
+
+Step3:
+
+查看连接设备，在终端输入：
+
+adb devices
+
+adb shell dumpsys activity recents | findstr "intent={"
